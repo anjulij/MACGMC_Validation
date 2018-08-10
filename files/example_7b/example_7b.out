@@ -1,0 +1,719 @@
+      __  __                    ____               _______
+     /  |/ |                   /   |              / _____/
+    /      |                  / /| |             / /      
+   / /|_/| |                 / /_| |            / /       
+  / /    | |                / ___  |           / /_____   
+ /_/     |_|icromechanics  /_/   |_|nalysis    \______/ode
+
+
+                           with                           
+
+      _______              __  __               _______   
+     / _____/             /  |/ |              / _____/   
+    / / ____             /      |             / /         
+   / / /_  /            / /|_/| |            / /          
+  / /___/ /            / /    | |           / /_____      
+  \______/eneralized  /_/     |_|ethod of   \______/ells  
+
+
+                       Version 4.z-3.9     
+
+
+                 NASA Glenn Research Center
+                  Ohio Aerospace Institute
+
+  Point of Contact:
+    Dr. Steven M. Arnold
+    NASA Glenn Research Center
+    http://www.grc.nasa.gov/WWW/StructuresMaterials/MLP/software/mac-gmc/index.html
+
+___________________________________________________________________________
+
+Disclaimer:  This software package is considered to be a research code 
+             and therefore no expressed or implied warranties are granted
+             pertaining to the results produced from the use of this code
+___________________________________________________________________________
+
+
+================================================================================================
+ Execution Initiated --->  16:17:27    7-12-2018
+================================================================================================
+
+
+ Input file ---> C:\Users\kjjones1\Desktop\MACGMC2\example_7b.mac                                                                                                      
+ Output file --> C:\Users\kjjones1\Desktop\MACGMC2\example_7b.out                                                                                                      
+
+
+
+******* PROBLEM TITLE ** PROBLEM TITLE ** PROBLEM TITLE ** PROBLEM TITLE ** PROBLEM TITLE *******
+
+ MAC/GMC 4.0 Example 7b - Electromagnetic RUC analysis                          
+
+*************************************************************************************************
+
+
+
+================================================================================================
+*****                           Section I:  Problem Input Data                             *****
+================================================================================================
+
+
+------------------------------------------------------------------------------------------------
+**  A:  Execution Flags  **
+------------------------------------------------------------------------------------------------
+
+
+
+ No Thermal Conductivities Requested
+
+
+ Electro-Magnetic Properties Requested
+
+ **** NOTE CURRENT ELECTRO-MAGNETIC ANALYSIS LIMITATIONS ****
+    1) Material properties must be user input
+    2) Constitutive model must be internal CMOD=9
+    3) Analysis uses triply periodic geometry only (can be laminate)
+    4) Must use LOP = 99
+  
+
+------------------------------------------------------------------------------------------------
+**  B:  Constituent Information  **
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+    B1:  Constituent Materials
+------------------------------------------------------------------------------------------------
+
+
+
+ Database material data (if selected) will be read from *internal* database
+
+ Number of constituent materials     (nmats) =  2
+
+COMMENT: # -- BATIO3 (BARIUM TITANATE)
+
+---------------------------------------------------------
+                    MATERIAL # 1
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Transversely Isotropic Elastic Model (Abritrary Specified Plane of Isotropy)
+
+ (CH1) = U
+
+ User input material properties
+
+
+ Material properties read from input file
+
+ (EM) = 1
+ Material Name: Mat #1 MAC #1   
+
+
+ Number of temperature points =  2
+
+ Input temperatures:
+              24.000    600.000
+
+ Elastic Properties: 
+   EA =    0.112E+12  0.112E+12
+   ET =    0.116E+12  0.116E+12
+   NUT =   0.321E+00  0.321E+00
+   NUA =   0.307E+00  0.307E+00
+   GA =    0.430E+11  0.430E+11
+
+ CTEs: 
+   Tangent CTEs input
+   ALPA =  0.199E-05  0.199E-05
+   ALPT =  0.853E-05  0.853E-05
+
+ Direction of local transverse isotropy
+      0.0000D+00    0.0000D+00    0.1000D+01
+
+
+ Electro-Magnetic Properties:
+
+   ES(1,1) =  0.1860E+02  0.1860E+02
+   ES(1,2) = -0.4400E+01 -0.4400E+01
+   ES(2,6) =  0.1160E+02  0.1160E+02
+   QS(1,1) =  0.0000E+00  0.0000E+00
+   QS(1,2) =  0.0000E+00  0.0000E+00
+   QS(2,6) =  0.0000E+00  0.0000E+00
+   KS(1,1) =  0.1260E-07  0.1260E-07
+   KS(2,2) =  0.1120E-07  0.1120E-07
+   AS(1,1) =  0.0000E+00  0.0000E+00
+   AS(2,2) =  0.0000E+00  0.0000E+00
+   MS(1,1) =  0.1000E-04  0.1000E-04
+   MS(2,2) =  0.5000E-05  0.5000E-05
+   PELS(1) =  0.1300E+05  0.1300E+05
+   PELS(2) =  0.1300E+05  0.1300E+05
+   PMGS(1) =  0.1300E+05  0.1300E+05
+   PMGS(2) =  0.0000E+00  0.0000E+00
+COMMENT: # -- COFE2O4 (COBALT FERRITE)
+
+---------------------------------------------------------
+                    MATERIAL # 2
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Transversely Isotropic Elastic Model (Abritrary Specified Plane of Isotropy)
+
+ (CH1) = U
+
+ User input material properties
+
+
+ Material properties read from input file
+
+ (EM) = 1
+ Material Name: Mat #2 MAC #1   
+
+   Elastic Properties:
+     1)   E Longitudinal     = 0.1436D+12
+     2)   E Transverse       = 0.1546D+12
+     3)   Nu Longitudinal    = 0.3700D+00
+     4)   Nu Transverse      = 0.3680D+00
+     5)   G                  = 0.4530D+11
+     6)   Alpha Longitudinal = 0.0000D+00
+     7)   Alpha Transverse   = 0.0000D+00
+
+
+ Direction of local transverse isotropy
+      0.0000D+00    0.0000D+00    0.1000D+01
+
+
+ Piezoelectric Matrix (ES):
+     0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+     0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+     0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+
+ Piezomagnetic Matrix (QS):
+     0.69970E+03   0.58030E+03   0.58030E+03   0.00000E+00   0.00000E+00   0.00000E+00
+     0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.55000E+03
+     0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.55000E+03   0.00000E+00
+
+ Dielectric Matrix (KS):
+     0.93000E-10   0.00000E+00   0.00000E+00
+     0.00000E+00   0.80000E-10   0.00000E+00
+     0.00000E+00   0.00000E+00   0.80000E-10
+
+ Magnetoelastic Matrix (AS):
+     0.00000E+00   0.00000E+00   0.00000E+00
+     0.00000E+00   0.00000E+00   0.00000E+00
+     0.00000E+00   0.00000E+00   0.00000E+00
+
+ Magnetic Permiability Matrix (MS):
+     0.15700E-03   0.00000E+00   0.00000E+00
+     0.00000E+00  -0.59000E-03   0.00000E+00
+     0.00000E+00   0.00000E+00  -0.59000E-03
+
+ Pyroelctric Constants (PELS):
+     0.00000E+00   0.00000E+00   0.00000E+00
+
+ Pyromagnetic Constants (PMGS):
+     0.00000E+00   0.00000E+00   0.00000E+00
+
+------------------------------------------------------------------------------------------------
+    B2:  Multiscale Materials
+------------------------------------------------------------------------------------------------
+
+   No user-defined multiscale materials defined
+   Note: 16 internal multicale materials are available
+
+------------------------------------------------------------------------------------------------
+**  C:  Analysis Type & Architecture Information  **
+------------------------------------------------------------------------------------------------
+
+ MOD           3
+
+--------------------------------------------------
+           ANALYSIS APPROACH INFORMATION          
+--------------------------------------------------
+
+ Selected Analysis Model:  3
+     1) Monolithic Material Analysis
+     2) Double Periodic GMC Micromechanics Model
+     3) Triple Periodic GMC Micromechanics Model
+    12) Double Periodic HFGMC Micromechanics Model
+    22) Double Periodic HFGMC Reformulated Micromechanics Model
+
+
+--------------------------------------------------
+                  RUC INFORMATION                 
+--------------------------------------------------
+
+ Subcell arrangement id.:  1
+     0) Monolithic material (using triply periodic GMC)
+     1) Short fiber in a square array
+        (Equal spacing in all three directions)
+     2) Short fiber in a diagonal array
+        (Variable spacing in X1-direction)
+     3) Off-set short fiber in a square array
+        (Variable spacing in X1-direction)
+     4) Ellipsoidal Inclusion
+    10) Open cell RUC
+    99) User defined RUC
+
+ Fiber Volume Ratio =      0.250E+00
+
+ Aspect Ratio =            0.100E+01
+
+
+------------------------------------------------------------------------------------------------
+**  D:  Applied Loading & Time Integration Information  **
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------
+              MECHANICAL LOADING DATA                  
+--------------------------------------------------
+
+
+---------- Load Component # 1 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component # 2 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component # 3 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.200E-01
+
+           Mode:
+              1
+
+
+---------- Load Component # 4 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component # 5 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component # 6 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component # 7 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component # 8 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component # 9 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component #10 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component #11 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+---------- Load Component #12 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.000E+00
+
+           Mode:
+              2
+
+
+--------------------------------------------------
+               THERMAL LOADING DATA                  
+--------------------------------------------------
+
+ Number of Temperature Points (npt) =  2
+
+    Time Points:
+          0.000     200.000
+
+    Temperature Points:
+          24.00      24.00
+
+
+--------------------------------------------------
+           TIME INTEGRATOR INFORMATION          
+--------------------------------------------------
+
+
+ Integrator ID               (ntf) = 1
+ -------------------------------------
+
+    * Forward Euler *
+
+    Number of Time Points     (npt) =  2
+
+
+    Time Points:
+          0.000     200.000
+    Time Steps:
+           0.100E+03
+
+
+ No Yield Surface Analysis Requested
+
+
+------------------------------------------------------------------------------------------------
+**  E:  Damage & Failure Information  **
+------------------------------------------------------------------------------------------------
+
+
+
+ No Fatigue Damage Analysis Requested
+
+  
+ No Elastic Allowable Estimates Requested
+  
+  
+ No Load-Based Multi-Axial Margin of Safety Requested
+  
+  
+ No Subcell Failure Analysis Requested
+  
+  
+ No RUC Failure Analysis Requested
+  
+  
+ No Laminate Failure Analysis Requested
+  
+  
+ No Debonding Analysis Requested
+  
+  
+ No Curtin Effective Fiber Breakage Model Analysis Requested
+  
+
+------------------------------------------------------------------------------------------------
+**  F:  Results Output Information  **
+------------------------------------------------------------------------------------------------
+
+ Print Level                 (nplvl) =  8
+
+
+
+ No PATRAN Output Requested
+
+
+
+ No MATLAB Output Requested
+
+
+
+--------------------------------------------------
+                  XY PLOT DATA                  
+--------------------------------------------------
+
+ Data Plot Increment         (npmax) =   1
+
+ Total Number of Macro Data Curves   =  3
+  Path = C:\Users\kjjones1\Desktop\MACGMC2\                                              
+
+  Curve Number:   1
+   Plot Filename:  EXAMPLE_7B_SE_macro.data                                                        
+   X Value =   3
+   Y Value =   9
+
+  Curve Number:   2
+   Plot Filename:  EXAMPLE_7B_DE_macro.data                                                        
+   X Value =   3
+   Y Value =  46
+
+  Curve Number:   3
+   Plot Filename:  EXAMPLE_7B_BE_macro.data                                                        
+   X Value =   3
+   Y Value =  49
+
+ Total Number of Micro Data Curves   =  0
+  
+ No Multiscale Modeling Options
+  
+
+
+================================================================================================
+*****                      Section II:  Effective Property Results                         *****
+================================================================================================
+
+
+
+------------------- SUBCELL IDENTIFICATION, VOLUME, AND MATERIAL ARRANGEMENT FOR LAYER 1-------------------
+
+
+   (ALPHA , BETA , GAMMA)     SUBCELL #       SUBCELL MATERIAL    SUBCELL VOLUME
+
+         1 , 1 , 1               1                   1             0.2500E+00
+         1 , 1 , 2               5                   2             0.1469E+00
+         1 , 2 , 1               3                   2             0.1469E+00
+         1 , 2 , 2               7                   2             0.8626E-01
+         2 , 1 , 1               2                   2             0.1469E+00
+         2 , 1 , 2               6                   2             0.8626E-01
+         2 , 2 , 1               4                   2             0.8626E-01
+         2 , 2 , 2               8                   2             0.5067E-01
+
+
+                                             TOTAL VOLUME =  0.1000E+01
+
+          MATERIAL NO. =  1     VOLUME RATIO =  0.2500E+00
+
+          MATERIAL NO. =  2     VOLUME RATIO =  0.7500E+00
+
+          RUC Dimensions: D = 0.1000E+01    H = 0.1000E+01    L = 0.1000E+01
+
+          Subcell Dimensions:
+          d =  0.62996E+00 0.37004E+00
+          h =  0.62996E+00 0.37004E+00
+          l =  0.62996E+00 0.37004E+00
+------------------------------------------------------------------------------------------------
+
+
+
+--------------------- EFFECTIVE PROPERTIES AT TEMPERATURE =    24.00 ----------------------------
+
+
+
+ ZG - Effective/Macro Stiffness/Electromagnetic Coefficient Matrix
+      |  2.449D+11  1.382D+11  1.353D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.565D-02  0.000D+00  0.000D+00  3.078D+02 |
+      |  1.382D+11  2.449D+11  1.353D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.565D-02  0.000D+00  0.000D+00  3.078D+02 |
+      |  1.353D+11  1.353D+11  2.404D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  9.518D-02  0.000D+00  0.000D+00  3.861D+02 |
+      |  0.000D+00  0.000D+00  0.000D+00  4.733D+10  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00  0.000D+00  3.397D+02  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  4.733D+10  0.000D+00  4.891D-02  0.000D+00  0.000D+00  3.397D+02  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  5.306D+10  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00 -1.332D-10  0.000D+00  0.000D+00  2.179D-10  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00  0.000D+00  0.000D+00 -1.332D-10  0.000D+00  0.000D+00  2.179D-10  0.000D+00 |
+      | -1.565D-02 -1.565D-02  9.518D-02  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.547D-10  0.000D+00  0.000D+00 -1.210D-11 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  3.397D+02  0.000D+00  2.179D-10  0.000D+00  0.000D+00  3.517D-04  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  3.397D+02  0.000D+00  0.000D+00  0.000D+00  2.179D-10  0.000D+00  0.000D+00  3.517D-04  0.000D+00 |
+      |  3.078D+02  3.078D+02  3.861D+02  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.210D-11  0.000D+00  0.000D+00 -1.011D-04 |
+
+ Effective Engineering Moduli
+
+     E11S =  0.145945816597033E+12
+     N12S =           0.3683486428
+     E22S =  0.145945816597033E+12
+     N23S =           0.3562372606
+     E33S =  0.145204732196797E+12
+     G23S =  0.470237666277414E+11
+     G13S =  0.470237666277414E+11
+     G12S =  0.530566287999857E+11
+
+
+ Effective Thermal Expansion Coefficients
+
+   NOTE: Shear CTEs are "engineering" shear CTEs
+
+    0.1927E-05  0.1927E-05  0.3256E-06
+    0.3074E-08  0.3074E-08  0.0000E+00
+
+
+ Effective Pyroelectric Vector
+
+    0.5223E+04  0.5223E+04  0.6427E+04
+
+
+ Effective Pyromagnetic Vector
+
+   -0.1131E-02 -0.1131E-02  0.2688E+01
+
+
+================================================================================================
+*****                           Section III:  Time-Based Output                            *****
+================================================================================================
+
+
+      1 TIME:  1.0000D+02     TEMP:  2.4000D+01     TSTEP:  1.0000D+02
+ -----------------------------------------------------------------------------------------------
+          STRESS:  0.0000D+00   0.0000D+00   1.4520D+09   0.0000D+00   0.0000D+00   0.0000D+00
+        E-M FLUX:  0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00
+          STRAIN: -3.5443D-03  -3.5443D-03   1.0000D-02   0.0000D+00   0.0000D+00   0.0000D+00
+       E-M FIELD:  0.0000D+00   0.0000D+00  -6.8696D+06   0.0000D+00   0.0000D+00  -1.6612D+04
+      TH. STRAIN:  0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00
+  PYRO E-M FIELD:  0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00
+  
+      TANGENT CTE:   1.9274D-06   1.9274D-06   3.2555D-07   3.0735D-09   3.0735D-09   0.0000D+00
+       SECANT CTE:   1.9274D-06   1.9274D-06   3.2555D-07   3.0735D-09   3.0735D-09   0.0000D+00
+TAN PYRO E-M VECT:   5.2231D+03   5.2231D+03   6.4268D+03  -1.1308D-03  -1.1308D-03   2.6880D+00
+SEC PYRO E-M VECT:   5.2231D+03   5.2231D+03   6.4268D+03  -1.1308D-03  -1.1308D-03   2.6880D+00
+       NOTE: TREF =   24.000
+
+    ELECTRO-MAGNETO-ELASTIC COEFFICIENT MATRIX:
+      |  2.449D+11  1.382D+11  1.353D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.565D-02  0.000D+00  0.000D+00  3.078D+02 |
+      |  1.382D+11  2.449D+11  1.353D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.565D-02  0.000D+00  0.000D+00  3.078D+02 |
+      |  1.353D+11  1.353D+11  2.404D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  9.518D-02  0.000D+00  0.000D+00  3.861D+02 |
+      |  0.000D+00  0.000D+00  0.000D+00  4.733D+10  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00  0.000D+00  3.397D+02  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  4.733D+10  0.000D+00  4.891D-02  0.000D+00  0.000D+00  3.397D+02  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  5.306D+10  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00 -1.332D-10  0.000D+00  0.000D+00  2.179D-10  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00  0.000D+00  0.000D+00 -1.332D-10  0.000D+00  0.000D+00  2.179D-10  0.000D+00 |
+      | -1.565D-02 -1.565D-02  9.518D-02  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.547D-10  0.000D+00  0.000D+00 -1.210D-11 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  3.397D+02  0.000D+00  2.179D-10  0.000D+00  0.000D+00  3.517D-04  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  3.397D+02  0.000D+00  0.000D+00  0.000D+00  2.179D-10  0.000D+00  0.000D+00  3.517D-04  0.000D+00 |
+      |  3.078D+02  3.078D+02  3.861D+02  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.210D-11  0.000D+00  0.000D+00 -1.011D-04 |
+  
+
+ Effective Thermal Expansion Coefficients
+
+   NOTE: Shear CTEs are "engineering" shear CTEs
+
+    0.1927E-05  0.1927E-05  0.3256E-06
+    0.3074E-08  0.3074E-08  0.0000E+00
+
+
+ Effective Pyroelectric Vector
+
+    0.5223E+04  0.5223E+04  0.6427E+04
+
+
+ Effective Pyromagnetic Vector
+
+   -0.1131E-02 -0.1131E-02  0.2688E+01
+
+
+      2 TIME:  2.0000D+02     TEMP:  2.4000D+01     TSTEP:  1.0000D+02
+ -----------------------------------------------------------------------------------------------
+          STRESS:  0.0000D+00   0.0000D+00   2.9041D+09   0.0000D+00   0.0000D+00   0.0000D+00
+        E-M FLUX:  0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00
+          STRAIN: -7.0886D-03  -7.0886D-03   2.0000D-02   0.0000D+00   0.0000D+00   0.0000D+00
+       E-M FIELD:  0.0000D+00   0.0000D+00  -1.3739D+07   0.0000D+00   0.0000D+00  -3.3223D+04
+      TH. STRAIN:  0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00
+  PYRO E-M FIELD:  0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00   0.0000D+00
+  
+      TANGENT CTE:   1.9274D-06   1.9274D-06   3.2555D-07   3.0735D-09   3.0735D-09   0.0000D+00
+       SECANT CTE:   1.9274D-06   1.9274D-06   3.2555D-07   3.0735D-09   3.0735D-09   0.0000D+00
+TAN PYRO E-M VECT:   5.2231D+03   5.2231D+03   6.4268D+03  -1.1308D-03  -1.1308D-03   2.6880D+00
+SEC PYRO E-M VECT:   5.2231D+03   5.2231D+03   6.4268D+03  -1.1308D-03  -1.1308D-03   2.6880D+00
+       NOTE: TREF =   24.000
+
+    ELECTRO-MAGNETO-ELASTIC COEFFICIENT MATRIX:
+      |  2.449D+11  1.382D+11  1.353D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.565D-02  0.000D+00  0.000D+00  3.078D+02 |
+      |  1.382D+11  2.449D+11  1.353D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.565D-02  0.000D+00  0.000D+00  3.078D+02 |
+      |  1.353D+11  1.353D+11  2.404D+11  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  9.518D-02  0.000D+00  0.000D+00  3.861D+02 |
+      |  0.000D+00  0.000D+00  0.000D+00  4.733D+10  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00  0.000D+00  3.397D+02  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  4.733D+10  0.000D+00  4.891D-02  0.000D+00  0.000D+00  3.397D+02  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  5.306D+10  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00 -1.332D-10  0.000D+00  0.000D+00  2.179D-10  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  4.891D-02  0.000D+00  0.000D+00  0.000D+00 -1.332D-10  0.000D+00  0.000D+00  2.179D-10  0.000D+00 |
+      | -1.565D-02 -1.565D-02  9.518D-02  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.547D-10  0.000D+00  0.000D+00 -1.210D-11 |
+      |  0.000D+00  0.000D+00  0.000D+00  0.000D+00  3.397D+02  0.000D+00  2.179D-10  0.000D+00  0.000D+00  3.517D-04  0.000D+00  0.000D+00 |
+      |  0.000D+00  0.000D+00  0.000D+00  3.397D+02  0.000D+00  0.000D+00  0.000D+00  2.179D-10  0.000D+00  0.000D+00  3.517D-04  0.000D+00 |
+      |  3.078D+02  3.078D+02  3.861D+02  0.000D+00  0.000D+00  0.000D+00  0.000D+00  0.000D+00 -1.210D-11  0.000D+00  0.000D+00 -1.011D-04 |
+  
+ MAIN: TIME EXCEEDED   200.000000000000     
+  
+ ENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND
+               _______   ______ 
+              / ____/ | / / __ \\
+             / __/ /  |/ / / / /
+            / /___/ /|  / /_/ / 
+           /_____/_/ |_/_____/  
+  
+ ENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND
+  
+ Execution Time:  0.039 second(s)
+

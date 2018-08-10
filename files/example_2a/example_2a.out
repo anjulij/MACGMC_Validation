@@ -1,0 +1,424 @@
+      __  __                    ____               _______
+     /  |/ |                   /   |              / _____/
+    /      |                  / /| |             / /      
+   / /|_/| |                 / /_| |            / /       
+  / /    | |                / ___  |           / /_____   
+ /_/     |_|icromechanics  /_/   |_|nalysis    \______/ode
+
+
+                           with                           
+
+      _______              __  __               _______   
+     / _____/             /  |/ |              / _____/   
+    / / ____             /      |             / /         
+   / / /_  /            / /|_/| |            / /          
+  / /___/ /            / /    | |           / /_____      
+  \______/eneralized  /_/     |_|ethod of   \______/ells  
+
+
+                       Version 4.z-3.9     
+
+
+                 NASA Glenn Research Center
+                  Ohio Aerospace Institute
+
+  Point of Contact:
+    Dr. Steven M. Arnold
+    NASA Glenn Research Center
+    http://www.grc.nasa.gov/WWW/StructuresMaterials/MLP/software/mac-gmc/index.html
+
+___________________________________________________________________________
+
+Disclaimer:  This software package is considered to be a research code 
+             and therefore no expressed or implied warranties are granted
+             pertaining to the results produced from the use of this code
+___________________________________________________________________________
+
+
+================================================================================================
+ Execution Initiated --->  16:11:41    7-12-2018
+================================================================================================
+
+
+ Input file ---> C:\Users\kjjones1\Desktop\MACGMC2\example_2a.mac                                                                                                      
+ Output file --> C:\Users\kjjones1\Desktop\MACGMC2\example_2a.out                                                                                                      
+
+
+
+******* PROBLEM TITLE ** PROBLEM TITLE ** PROBLEM TITLE ** PROBLEM TITLE ** PROBLEM TITLE *******
+
+ MAC/GMC 4.0 Example 2a - Bodner-Partom Viscoplastic Constitutive Model         
+
+*************************************************************************************************
+
+
+
+================================================================================================
+*****                           Section I:  Problem Input Data                             *****
+================================================================================================
+
+
+------------------------------------------------------------------------------------------------
+**  A:  Execution Flags  **
+------------------------------------------------------------------------------------------------
+
+
+
+ No Thermal Conductivities Requested
+
+
+ No Electro-Magnetic Properties Requested
+
+
+------------------------------------------------------------------------------------------------
+**  B:  Constituent Information  **
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+    B1:  Constituent Materials
+------------------------------------------------------------------------------------------------
+
+
+
+ Database material data (if selected) will be read from *internal* database
+
+ Number of constituent materials     (nmats) =  7
+
+COMMENT: # -- AL 2024-T4
+
+---------------------------------------------------------
+                    MATERIAL # 1
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Bodner-Partom Viscoplastic Model
+
+ Properties taken at temperature:    23.0
+
+ *** WARNING ***
+    Although material properties will be taken at T =    23.0
+    to execute at this temperature, it must be specified in *THERM
+
+ (CH1) = A
+
+ Material properties read from database
+
+ Material Name: Al 2024-T4      
+
+COMMENT: # -- AL 2024-0
+
+---------------------------------------------------------
+                    MATERIAL # 2
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Bodner-Partom Viscoplastic Model
+
+ Properties taken at temperature:    23.0
+
+ *** WARNING ***
+    Although material properties will be taken at T =    23.0
+    to execute at this temperature, it must be specified in *THERM
+
+ (CH1) = B
+
+ Material properties read from database
+
+ Material Name: Al 2024-0       
+
+COMMENT: # -- AL 6061-0 (A)
+
+---------------------------------------------------------
+                    MATERIAL # 3
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Bodner-Partom Viscoplastic Model
+
+ Properties taken at temperature:    23.0
+
+ *** WARNING ***
+    Although material properties will be taken at T =    23.0
+    to execute at this temperature, it must be specified in *THERM
+
+ (CH1) = C
+
+ Material properties read from database
+
+ Material Name: Al 6061-0a      
+
+COMMENT: # -- AL 6061-0 (B)
+
+---------------------------------------------------------
+                    MATERIAL # 4
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Bodner-Partom Viscoplastic Model
+
+ Properties taken at temperature:    23.0
+
+ *** WARNING ***
+    Although material properties will be taken at T =    23.0
+    to execute at this temperature, it must be specified in *THERM
+
+ (CH1) = D
+
+ Material properties read from database
+
+ Material Name: Al 6061-0b      
+
+COMMENT: # -- AL PURE
+
+---------------------------------------------------------
+                    MATERIAL # 5
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Bodner-Partom Viscoplastic Model
+
+ Properties taken at temperature:    23.0
+
+ *** WARNING ***
+    Although material properties will be taken at T =    23.0
+    to execute at this temperature, it must be specified in *THERM
+
+ (CH1) = E
+
+ Material properties read from database
+
+ Material Name: Al pure el/pl   
+
+COMMENT: # -- TI PURE
+
+---------------------------------------------------------
+                    MATERIAL # 6
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Bodner-Partom Viscoplastic Model
+
+ Properties taken at temperature:    23.0
+
+ *** WARNING ***
+    Although material properties will be taken at T =    23.0
+    to execute at this temperature, it must be specified in *THERM
+
+ (CH1) = F
+
+ Material properties read from database
+
+ Material Name: Ti pure         
+
+COMMENT: # -- CU
+
+---------------------------------------------------------
+                    MATERIAL # 7
+---------------------------------------------------------
+
+ Constitutive Model Chosen:
+  Bodner-Partom Viscoplastic Model
+
+ Properties taken at temperature:    23.0
+
+ *** WARNING ***
+    Although material properties will be taken at T =    23.0
+    to execute at this temperature, it must be specified in *THERM
+
+ (CH1) = G
+
+ Material properties read from database
+
+ Material Name: Copper (B-P)    
+
+
+------------------------------------------------------------------------------------------------
+    B2:  Multiscale Materials
+------------------------------------------------------------------------------------------------
+
+   No user-defined multiscale materials defined
+   Note: 16 internal multicale materials are available
+
+------------------------------------------------------------------------------------------------
+**  C:  Analysis Type & Architecture Information  **
+------------------------------------------------------------------------------------------------
+
+ MOD           1
+
+--------------------------------------------------
+           ANALYSIS APPROACH INFORMATION          
+--------------------------------------------------
+
+ Selected Analysis Model:  1
+     1) Monolithic Material Analysis
+     2) Double Periodic GMC Micromechanics Model
+     3) Triple Periodic GMC Micromechanics Model
+    12) Double Periodic HFGMC Micromechanics Model
+    22) Double Periodic HFGMC Reformulated Micromechanics Model
+
+
+--------------------------------------------------
+                  RUC INFORMATION                 
+--------------------------------------------------
+
+ Selected RVE =   0
+     Monolithic Layer                = 0
+     Square Pack With 4 Subcells     = 1
+     Triangular pack                 = 2
+     Square Diagonal Pack            = 3
+     Cross Shape Fiber               = 4
+      (Square Pack)              
+     ---------------------------
+     Circular Fiber Approximation    = 6
+      (49 Cell)                  
+     Circular Fiber Approximation    = 7
+      (196 Cell)                 
+     Square Pack                     = 9
+      (Two Fibers of Different Size) 
+     Rectangular Pack                = 11
+     26x26 circular x-section fiber  = 13
+     8x8 circular fiber approx.      = 20
+     10x10 circular fiber approx.    = 21
+     User Defined RVE                = 99
+
+ Interface IS NOT present
+
+ Monolithic Material ID Number:  1
+
+ Material Arrangement:
+        1
+  
+ Subcell Dimensions:
+ H =   1.00000
+ L =   1.00000
+
+------------------------------------------------------------------------------------------------
+**  D:  Applied Loading & Time Integration Information  **
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------
+              MECHANICAL LOADING DATA                  
+--------------------------------------------------
+
+
+---------- Load Component # 1 ----------
+
+ Number of Load Points        (npt) =  2
+    Time Points:
+           0.00     200.00
+
+    Load Points:
+      0.000E+00  0.200E-01
+
+           Mode:
+              1
+  
+ *** WARNING ***
+   *THERM not found, temperature assumed to be 21. C
+    or taken from TREF data in *CONSTITUENTS
+
+
+--------------------------------------------------
+           TIME INTEGRATOR INFORMATION          
+--------------------------------------------------
+
+
+ Integrator ID               (ntf) = 1
+ -------------------------------------
+
+    * Forward Euler *
+
+    Number of Time Points     (npt) =  2
+
+
+    Time Points:
+          0.000     200.000
+    Time Steps:
+           0.250E-01
+
+
+ No Yield Surface Analysis Requested
+
+
+------------------------------------------------------------------------------------------------
+**  E:  Damage & Failure Information  **
+------------------------------------------------------------------------------------------------
+
+
+
+ No Fatigue Damage Analysis Requested
+
+  
+ No Elastic Allowable Estimates Requested
+  
+  
+ No Load-Based Multi-Axial Margin of Safety Requested
+  
+  
+ No Subcell Failure Analysis Requested
+  
+  
+ No RUC Failure Analysis Requested
+  
+  
+ No Laminate Failure Analysis Requested
+  
+  
+ No Debonding Analysis Requested
+  
+  
+ No Curtin Effective Fiber Breakage Model Analysis Requested
+  
+
+------------------------------------------------------------------------------------------------
+**  F:  Results Output Information  **
+------------------------------------------------------------------------------------------------
+
+ Print Level                 (nplvl) =  0
+
+
+
+ No PATRAN Output Requested
+
+
+
+ No MATLAB Output Requested
+
+
+
+--------------------------------------------------
+                  XY PLOT DATA                  
+--------------------------------------------------
+
+ Data Plot Increment         (npmax) =  10
+
+ Total Number of Macro Data Curves   =  1
+  Path = C:\Users\kjjones1\Desktop\MACGMC2\                                              
+
+  Curve Number:   1
+   Plot Filename:  EXAMPLE_2A_macro.data                                                           
+   X Value =   1
+   Y Value =   7
+
+ Total Number of Micro Data Curves   =  0
+  
+ No Multiscale Modeling Options
+  
+------------------------------------------------------------------------------------------------
+
+
+ MAIN: TIME EXCEEDED   200.000000000028     
+  
+ ENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND
+               _______   ______ 
+              / ____/ | / / __ \\
+             / __/ /  |/ / / / /
+            / /___/ /|  / /_/ / 
+           /_____/_/ |_/_____/  
+  
+ ENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND
+  
+ Execution Time:  0.054 second(s)
+

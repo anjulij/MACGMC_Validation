@@ -1,0 +1,31 @@
+Comparison between files/sampleFile/dummydoc.out and newFiles/sampleFile/dummydoc.out
+
+1. Number of sections and section names check
+	true, section names and number of sections match in each output file
+
+2. Number of subsections check
+	false
+	Section II:  Effective Property Results
+	files/sampleFile/dummydoc.out
+	subsection cardinality does not match in output files
+	[SUBCELL IDENTIFICATION, VOLUME, AND MATERIAL ARRANGEMENT FOR LAYER 8]
+
+	true
+	Section III:  Time-Based Output
+	both output files contain matching subsection cardinality
+
+3. Subsection names check
+	false
+	Section III:  Time-Based Output
+	subsection names do not match in both output files
+
+4. Subsection elements check
+	false
+	Section II:  Effective Property Results
+	Subsection name: LAMINATE RESULTS AT TEMPERATURE =    21.00
+	matrices do not have the same values: 930300000000.000000 != 130300000000.000000
+
+	false
+	Section III:  Time-Based Output
+	Subsection name: 1 TIME:  1.0000D-01     TEMP:  2.3000D+01     TSTEP:  1.0000D-01
+	matrices do not have the same values: 0.000043 != 4347.655281
