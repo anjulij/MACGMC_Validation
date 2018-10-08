@@ -44,6 +44,36 @@ public class Matrix {
         return sb.toString();
     }
 
+    public String toJson(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("{\n");
+        sb.append(String.format("\"%s\":[",getMatrixTitle()));
+
+        Double [][] m = getMatrixArray();
+        for (int row = 0; row < m.length; row++) {
+            for (int col = 0; col < m[row].length; col++){
+                double value = m[row][col];
+                if(col == 0){
+                    sb.append(String.format("[%f,", value));
+                }
+                else if(col == m[row].length-1){
+                    if(row == m.length -1 ){
+                        sb.append(String.format("%f]]", value));
+                    }
+                    else {
+                        sb.append(String.format("%f],", value));
+                    }
+                }
+                else{
+                    sb.append(String.format("%f,", value));
+                }
+
+            }
+        }
+        sb.append("\n}");
+        return sb.toString();
+    }
+
     public int getColumns() {
         return columns;
     }

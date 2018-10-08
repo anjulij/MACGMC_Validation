@@ -41,10 +41,10 @@ public class TimeBasedOutput {
         }
         return sb.toString();
     }
+
     public Map<String, Map<String, Object>> getSectionDataMap() {
         return sectionDataMap;
     }
-
 
     private void identifyTimeBasedOutput() {
         for (int i = sectionStartIndex; i < sectionEndIndex; i++) {

@@ -23,12 +23,11 @@ public class Main {
         dummydocTest.addSectionEfficiently("Section II:");
 
         System.out.println(dummydoc.toString());
-        System.out.println(dummydoc.toStringDataMap());
-
+        //System.out.println(dummydoc.toStringDataMap());
+        
         /*Compare output here*/
         OutputComparator ocTest = new OutputComparator(dummydoc, dummydocTest);
 
-        System.out.println(ocTest);
 
         long tEnd = System.currentTimeMillis();
         long tDelta = tEnd - tStart;
