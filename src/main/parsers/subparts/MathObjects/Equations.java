@@ -37,6 +37,26 @@ public class Equations extends MathObject {
         return sb.toString();
     }
 
+    public String toJson(){
+        StringBuilder sb = new StringBuilder();
+       if(!equations.isEmpty()){
+           Iterator i = equations.entrySet().iterator();
+           while (i.hasNext()){
+               Map.Entry entry = (Map.Entry) i.next();
+               sb.append("{\n");
+               sb.append(String.format("\t\"%s\": ",entry.getKey()));
+               if(i.hasNext()){
+                   sb.append(String.format("%s, ", entry.getValue().toString().replace("[","").replace("]","")));
+               }
+               else{
+                   sb.append(String.format("%s \n}",entry.getValue().toString().replace("[","").replace("]","")));
+               }
+               i.remove();
+           }
+       }
+        return sb.toString();
+    }
+
     private Boolean isMathEquation() {
         return line.matches(String.format(".*%s.*", Regex.REGEX_EQN));
     }

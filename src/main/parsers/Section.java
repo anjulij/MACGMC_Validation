@@ -88,6 +88,10 @@ public class Section {
             return "";
         }
     }
+    //TODO: complete toJson for Section
+    /*public String toJson(){
+
+    }*/
 
     public String toStringDataMap() {
         StringBuilder sb = new StringBuilder();

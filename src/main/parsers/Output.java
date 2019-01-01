@@ -42,7 +42,14 @@ public class Output {
         }
         return sb.toString();
     }
-
+    //TODO: complete toJson for output
+    /*public String toJson(){
+        StringBuilder sb = new StringBuilder();
+        for (Section s : sections) {
+            sb.append(s.toJson());
+        }
+        return sb.toString();
+    }*/
     public String toStringDataMap() {
         StringBuilder sb = new StringBuilder();
         for (Section s : sections) {
